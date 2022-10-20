@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 class OpenAIinput(BaseModel):
-    model: str = "fastertransformer"
+    model: Optional[str] = "codegen"
     prompt: Optional[str]
     suffix: Optional[str]
     max_tokens: Optional[int] = 16
@@ -20,4 +20,3 @@ class OpenAIinput(BaseModel):
     best_of: Optional[int] = 1
     logit_bias: Optional[dict]
     user: Optional[str]
-
